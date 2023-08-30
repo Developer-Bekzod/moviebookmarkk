@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    * {
+      user-select: none;
+    }
+
+    .bookmark__movie:not(:first-child) {
+      margin: 1rem 0rem;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <header style="z-index: 99999999;" class="text-center position-fixed bg-light top-0 w-100 py-4">
+
+    <div class="container">
+      <h1 class="my-3 mt-2">Movie app</h1>
+      <form id="form"></form>
+      <div class="row">
+        <div class="col">
+          <select class="form-select select__category" form="form">
+            <option value="all">All</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <input form="form" class="form-control search_movie" type="text" placeholder="Search">
+        </div>
+        <div class="col">
+          <select form="form" class="form-select select__sort">
+            <option value="null" selected disabled>Sort</option>
+            <option value="AZ">AZ</option>
+            <option value="ZA">ZA</option>
+            <option value="RATING">RATING</option>
+            <option value="YEAR">YEAR</option>
+          </select>
+        </div>
+        <div class="col">
+          <button form="form" class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <template>
+    <li class="movie border shadow rounded text-center p-2 mb-4" style="width:100%;">
+      <img class="movie_img" src="https://via.placeholder.com/200x200" alt="Movie" width="280" height="200">
+      <h4 class="fs-3 movie_name my-3">Name</h4>
+      <h5 class="movie_year">Year</h5>
+      <p class="text-truncate movie_summary w-50 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Eius, repudiandae?</p>
+      <div class="row1">
+        <a href="" class="btn btn-success trailer me-2">Trailer</a>
+        <button class=" btn btn-danger Bookmark__btn">Bookmark</button>
+      </div>
+    </li>
+
+  </template>
+  <template class="bookmark__template">
+    <div class="bookmark__movie">
+      <h3 class="name">Name</h3>
+      <a href="" class="btn btn-success trailer me-2">Trailer</a>
+      <button class="btn btn-danger Delete__bookmark">Delete</button>
+    </div>
+  </template>
+
+  <main style="margin-top: 10rem;">
+    <div class="contaner">
+      <div class="accordion w-50 mx-auto" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Bookmark Movie
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body bookmark__items">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div> -->
+      </div>
+    </div>
+    <section class="hero mt-3 mb-2">
+      <div class="container">
+        <ul class="movies_items d-grid  align-items-center my-3 me-2  list-unstyled justify-content-between flex-wrap"
+          style="margin-top: 50px;">
+
+
+
+        </ul>
+        <div class="pagination__movie d-flex align-items-center 
+          justify-content-center mt-3 ">
+
+
+          <button class="btn btn-primary" id="previous">Previous</button>
+          <strong class="page mx-3 fs-4">1</strong>
+          <button class="btn btn-primary" id="next">Next</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+  <script src="/javascript/movies.js"></script>
+  <script src="/javascript/main.js"></script>
+</body>
+
+</html>

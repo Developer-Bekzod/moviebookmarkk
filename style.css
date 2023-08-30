@@ -1,0 +1,184 @@
+    /* @media only screen and (max-width:1500px){
+        header{
+            
+        }
+        img{
+            width: 100%;
+        }
+        .Bookmark__btn{
+            width: 50px;
+        }
+
+    }
+
+    @media only screen and (min-width:1200px){
+        header{
+
+        }
+       .movie_img{
+            width: 100%;
+        }
+        .Bookmark__btn{
+           
+        
+        }.movies_items{
+            display: grid;
+            grid-template-columns: 2 17;
+        }
+    }
+
+
+    @media only screen and (min-width:1000px){
+        header{
+            
+        }
+        main{
+
+        
+
+        }
+        img{
+            width: 200px;
+        }
+    }
+
+    @media only screen and (min-width:800px){
+        header{
+            
+        }
+        img{
+            width: 100%;
+        }
+        .Bookmark__btn{
+            width: 100px;
+        }
+    }
+
+    @media only screen and (min-width:600px){
+        header{
+            
+        }
+     
+        img{
+            width: 130px;
+            
+
+        }
+        .Bookmark__btn{
+            width: 100px;
+            margin-top: 10px;
+        }
+    }
+
+    @media only screen and (max-width:400px){
+    
+        img{
+            width: 100px;
+        }
+        .row1{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+        
+    }
+    @media only screen and (max-width:300px){
+    .row1{
+        img{
+            width: 10px;
+          }
+          .Bookmark__btn{
+  
+             width: 100px;
+          }
+          .shadow{
+            width: 100%;
+          }
+    }
+       
+        
+    }
+
+    @media only screen and (max-width:200px){
+    
+        img{
+          width: 80px;
+        }
+        .Bookmark__btn{
+
+           width: 80px;
+        }
+        li{
+            
+        }
+    }
+
+
+
+
+/* @media only screen and(max-width:1200px){
+   .Bookmark__btn{
+    width: 50px;
+   }
+   img{
+    width: 100px;
+   }
+}
+
+@media only screen and(min-width:1000px){
+    .Bookmark__btn{
+     width: 50px;
+    }
+    .movie_img{
+    max-width: 200;
+    }
+ } */ 
+
+.movie_img{
+    width: 100%;
+}
+.movies_items{
+    display: grid;
+    grid-template: repeat(4, auto) / repeat(3, 30%);
+}
+ @media only screen and (max-width:1200px){
+    .movies_items{
+
+        grid-template: repeat(5, auto) / repeat(2, 45%);
+    }
+    /* .movie_img{
+        grid-template: repeat(5, auto) / repeat(2, 45%);
+    } */
+ }
+ @media only screen and (max-width:770px){
+    .movies_items{
+
+        grid-template: repeat(10, auto) / repeat(1, 98%);
+    }
+}
+.row{
+    display: grid;
+    grid-template: repeat(1, auto) / repeat(4, 359px);
+}
+.col-2{
+    width: 250px;
+}
+ @media only screen and (max-width:1400px) {
+    .row{
+        grid-template: repeat(2, auto) / repeat(2, 40%);
+        gap: 10px;
+    }
+    .accordion{
+        margin-top: 12.9rem;
+    }
+}
+@media only screen and (max-width:370px) {
+    .row{
+        justify-content: center;
+        grid-template: repeat(4, auto) / repeat(1, 80%);
+        gap: 10px;
+    }
+    .accordion{
+        margin-top: 17.9rem;
+    }
+}
